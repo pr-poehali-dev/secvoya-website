@@ -11,13 +11,12 @@ export default function Index() {
       <nav className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center">
               <img 
                 src="https://cdn.poehali.dev/files/d65cf35b-734d-408e-b02c-102776cabda9.png" 
                 alt="Secvoya Logo" 
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
-              <span className="text-xl font-semibold text-foreground">Secvoya</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
