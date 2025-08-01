@@ -11,10 +11,12 @@ export default function Index() {
       <nav className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Icon name="Shield" size={18} className="text-primary-foreground" />
-              </div>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="https://cdn.poehali.dev/files/d65cf35b-734d-408e-b02c-102776cabda9.png" 
+                alt="Secvoya Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-xl font-semibold text-foreground">Secvoya</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -539,10 +541,12 @@ export default function Index() {
       <footer className="border-t border-border bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Icon name="Shield" size={18} className="text-primary-foreground" />
-              </div>
+            <div className="flex items-center space-x-3 mb-4 md:mb-0">
+              <img 
+                src="https://cdn.poehali.dev/files/d65cf35b-734d-408e-b02c-102776cabda9.png" 
+                alt="Secvoya Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-xl font-semibold">Secvoya</span>
             </div>
             <p className="text-sm text-muted-foreground">
