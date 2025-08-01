@@ -15,7 +15,7 @@ export default function Index() {
               <img 
                 src="https://cdn.poehali.dev/files/d65cf35b-734d-408e-b02c-102776cabda9.png" 
                 alt="Secvoya Logo" 
-                className="w-16 h-16 object-contain"
+                className="w-32 h-32 object-contain"
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
