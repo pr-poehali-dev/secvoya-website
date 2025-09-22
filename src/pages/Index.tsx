@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -5,6 +6,8 @@ import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
 
 export default function Index() {
+  const [activeService, setActiveService] = useState<'pentest' | 'appsec'>('pentest');
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -40,10 +43,69 @@ export default function Index() {
               Выстраиваем DevSecOps и внедряем AppSec на уровне культуры, а не галочек.
               Автоматизируем безопасность в CI/CD без компромиссов по скорости релизов.
             </p>
+            
+            {/* iPhone-style Toggle */}
+            <div className="flex justify-center mb-8">
+              <div className="relative bg-muted p-1 rounded-xl border border-border shadow-inner">
+                <div 
+                  className={`absolute top-1 bottom-1 rounded-lg bg-background shadow-md transition-all duration-300 ease-in-out ${
+                    activeService === 'pentest' ? 'left-1 right-1/2' : 'left-1/2 right-1'
+                  }`}
+                />
+                <div className="relative flex">
+                  <button
+                    onClick={() => setActiveService('pentest')}
+                    className={`px-6 py-3 text-sm font-medium rounded-lg transition-colors duration-200 z-10 ${
+                      activeService === 'pentest' 
+                        ? 'text-foreground' 
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Pentest
+                  </button>
+                  <button
+                    onClick={() => setActiveService('appsec')}
+                    className={`px-6 py-3 text-sm font-medium rounded-lg transition-colors duration-200 z-10 ${
+                      activeService === 'appsec' 
+                        ? 'text-foreground' 
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    AppSec
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            {/* Dynamic Content Based on Toggle */}
+            <div className="mb-8">
+              {activeService === 'pentest' ? (
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-semibold text-foreground">
+                    Комплексное тестирование на проникновение
+                  </h2>
+                  <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Выявляем уязвимости в инфраструктуре, веб-приложениях и мобильных решениях.
+                    Проводим атаки в контролируемой среде для проверки реальной защищенности.
+                  </p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-semibold text-foreground">
+                    Безопасность приложений как процесс
+                  </h2>
+                  <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Внедряем культуру безопасной разработки и DevSecOps практики.
+                    Автоматизируем проверки безопасности в жизненном цикле разработки.
+                  </p>
+                </div>
+              )}
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="px-8">
                 <Icon name="Calendar" size={18} className="mr-2" />
-                Запросить аудит
+                {activeService === 'pentest' ? 'Заказать пентест' : 'Запросить аудит'}
               </Button>
               <Button variant="outline" size="lg" className="px-8">
                 <Icon name="Play" size={18} className="mr-2" />
