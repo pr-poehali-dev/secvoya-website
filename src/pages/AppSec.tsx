@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -5,21 +7,63 @@ import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
 
 export default function AppSec() {
+  const [activeService] = useState<'pentest' | 'appsec'>('appsec');
+  const navigate = useNavigate();
+
+  const handleServiceChange = (service: 'pentest' | 'appsec') => {
+    if (service === 'pentest') {
+      navigate('/pentest');
+    } else {
+      navigate('/appsec');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <nav className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <a href="/" className="flex items-center">
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center">
                 <img 
                   src="https://cdn.poehali.dev/files/d65cf35b-734d-408e-b02c-102776cabda9.png" 
                   alt="Secvoya Logo" 
                   className="w-10 h-10 object-contain mr-3"
                 />
                 <span className="text-xl font-semibold">Secvoya</span>
-              </a>
+              </div>
+              
+              {/* Service Toggle */}
+              <div className="relative bg-muted p-1 rounded-xl border border-border shadow-inner">
+                <div 
+                  className={`absolute top-1 bottom-1 rounded-lg bg-background shadow-md transition-all duration-300 ease-in-out ${
+                    activeService === 'pentest' ? 'left-1 right-1/2' : 'left-1/2 right-1'
+                  }`}
+                />
+                <div className="relative flex">
+                  <button
+                    onClick={() => handleServiceChange('pentest')}
+                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 z-10 ${
+                      activeService === 'pentest' 
+                        ? 'text-foreground' 
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    PenTest
+                  </button>
+                  <button
+                    onClick={() => handleServiceChange('appsec')}
+                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 z-10 ${
+                      activeService === 'appsec' 
+                        ? 'text-foreground' 
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    AppSec
+                  </button>
+                </div>
+              </div>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
