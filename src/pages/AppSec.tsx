@@ -91,7 +91,7 @@ export default function AppSec() {
                 <Icon name="Calendar" size={18} className="mr-2" />
                 Запросить аудит
               </Button>
-              <Button variant="outline" size="lg" className="px-8">
+              <Button variant="outline" size="lg" className="px-8 border-orange text-orange hover:bg-orange hover:text-white">
                 <Icon name="Play" size={18} className="mr-2" />
                 Получить демо
               </Button>
