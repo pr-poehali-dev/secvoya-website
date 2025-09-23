@@ -550,7 +550,7 @@ export default function AppSec() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="px-8 bg-green-600 text-white hover:bg-green-700">
+            <Button size="lg" className="px-8">
               <Icon name="MessageSquare" size={18} className="mr-2" />
               Получить предварительный аудит
             </Button>
