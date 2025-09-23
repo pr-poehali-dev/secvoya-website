@@ -80,7 +80,7 @@ export default function AppSec() {
           <div className="text-center animate-fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Безопасная разработка —<br />
-              <span className="text-secondary">как процесс, а не как услуга</span>
+              <span className="text-primary">как процесс, а не как услуга</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
               Выстраиваем DevSecOps и внедряем AppSec на уровне культуры, а не галочек.
