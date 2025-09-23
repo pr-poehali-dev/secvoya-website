@@ -28,10 +28,9 @@ export default function AppSec() {
               <div className="flex items-center">
                 <img 
                   src="https://cdn.poehali.dev/files/d65cf35b-734d-408e-b02c-102776cabda9.png" 
-                  alt="Secvoya Logo" 
-                  className="w-10 h-10 object-contain mr-3"
+                  alt="Logo" 
+                  className="w-30 h-30 object-contain"
                 />
-                <span className="text-xl font-semibold">Secvoya</span>
               </div>
               
               {/* Service Toggle */}
@@ -47,7 +46,7 @@ export default function AppSec() {
                     className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 z-10 ${
                       activeService === 'pentest' 
                         ? 'text-foreground' 
-                        : 'text-muted-foreground hover:text-foreground'
+                        : 'text-orange hover:text-orange/80'
                     }`}
                   >
                     PenTest
@@ -534,7 +533,7 @@ export default function AppSec() {
           </div>
 
           <div className="text-center mt-8">
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" className="border-orange text-orange hover:bg-orange hover:text-white">
               <Icon name="Download" size={18} className="mr-2" />
               Скачать чек-лист соответствия ГОСТ
             </Button>
@@ -555,7 +554,7 @@ export default function AppSec() {
               <Icon name="MessageSquare" size={18} className="mr-2" />
               Получить предварительный аудит
             </Button>
-            <Button variant="outline" size="lg" className="px-8">
+            <Button variant="outline" size="lg" className="px-8 border-orange text-orange hover:bg-orange hover:text-white">
               <Icon name="Video" size={18} className="mr-2" />
               Записаться на демо
             </Button>
