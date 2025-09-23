@@ -29,12 +29,12 @@ export default function AppSec() {
                 <img 
                   src="https://cdn.poehali.dev/files/d65cf35b-734d-408e-b02c-102776cabda9.png" 
                   alt="Logo" 
-                  className="w-30 h-30 object-contain"
+                  className="w-32 h-32 object-contain"
                 />
               </div>
               
               {/* Service Toggle */}
-              <div className="relative bg-muted p-1 rounded-xl border border-border shadow-inner">
+              <div className="relative bg-orange/20 p-1 rounded-xl border border-border shadow-inner">
                 <div 
                   className={`absolute top-1 bottom-1 rounded-lg bg-background shadow-md transition-all duration-300 ease-in-out ${
                     activeService === 'pentest' ? 'left-1 right-1/2' : 'left-1/2 right-1'
@@ -56,7 +56,7 @@ export default function AppSec() {
                     className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 z-10 ${
                       activeService === 'appsec' 
                         ? 'text-foreground' 
-                        : 'text-muted-foreground hover:text-foreground'
+                        : 'text-orange hover:text-orange/80'
                     }`}
                   >
                     AppSec
@@ -200,23 +200,23 @@ export default function AppSec() {
               <h3 className="text-xl font-semibold mb-4">Реальные практики DevSecOps</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle" size={16} className="text-secondary" />
+                  <Icon name="CheckCircle" size={16} className="text-orange" />
                   <span className="text-sm">Shift Left Security</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle" size={16} className="text-secondary" />
+                  <Icon name="CheckCircle" size={16} className="text-orange" />
                   <span className="text-sm">Pipeline Hardening</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle" size={16} className="text-secondary" />
+                  <Icon name="CheckCircle" size={16} className="text-orange" />
                   <span className="text-sm">Infrastructure as Code Security</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle" size={16} className="text-secondary" />
+                  <Icon name="CheckCircle" size={16} className="text-orange" />
                   <span className="text-sm">Policy as Code</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle" size={16} className="text-secondary" />
+                  <Icon name="CheckCircle" size={16} className="text-orange" />
                   <span className="text-sm">SBOM Generation</span>
                 </div>
               </div>
@@ -245,19 +245,19 @@ export default function AppSec() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Gap-анализ текущих процессов</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Аудит пайплайна CI/CD</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Архитектурный обзор решений</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Политика управления зависимостями</span>
                   </li>
                 </ul>
@@ -275,19 +275,19 @@ export default function AppSec() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Интеграция в CI/CD (GitLab, GitHub Actions)</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Threat modeling и SAST/DAST/SCA</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>IaC security и policy-as-code</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>SBOM и secrets detection</span>
                   </li>
                 </ul>
@@ -305,19 +305,19 @@ export default function AppSec() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Open Source и Enterprise решения</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Техническое обоснование выбора</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Настройка и кастомизация</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Обучение команды работе с инструментами</span>
                   </li>
                 </ul>
@@ -335,19 +335,19 @@ export default function AppSec() {
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Культура secure coding</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Интенсивы и воркшопы</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>Практические тренинги</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <Icon name="Dot" size={16} className="text-secondary" />
+                    <Icon name="Dot" size={16} className="text-orange" />
                     <span>KPI для внедрения DevSecOps</span>
                   </li>
                 </ul>
@@ -550,7 +550,7 @@ export default function AppSec() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="px-8">
+            <Button size="lg" className="px-8 border-orange border-2 bg-orange text-white hover:bg-orange/80">
               <Icon name="MessageSquare" size={18} className="mr-2" />
               Получить предварительный аудит
             </Button>
@@ -566,7 +566,7 @@ export default function AppSec() {
             <div>
               <Icon name="Mail" size={24} className="mx-auto mb-2 text-secondary" />
               <h4 className="font-semibold mb-1">Email</h4>
-              <p className="text-muted-foreground">info@secvoya.ru</p>
+              <p className="text-muted-foreground">hello@secvoya.ru</p>
             </div>
             <div>
               <Icon name="MessageCircle" size={24} className="mx-auto mb-2 text-secondary" />
@@ -576,7 +576,7 @@ export default function AppSec() {
             <div>
               <Icon name="Phone" size={24} className="mx-auto mb-2 text-secondary" />
               <h4 className="font-semibold mb-1">Телефон</h4>
-              <p className="text-muted-foreground">+7 (495) 000-00-00</p>
+              <p className="text-muted-foreground">+7 (908) 534 6430</p>
             </div>
           </div>
         </div>
@@ -590,9 +590,8 @@ export default function AppSec() {
               <img 
                 src="https://cdn.poehali.dev/files/d65cf35b-734d-408e-b02c-102776cabda9.png" 
                 alt="Secvoya Logo" 
-                className="w-10 h-10 object-contain"
+                className="w-32 h-32 object-contain"
               />
-              <span className="text-xl font-semibold">Secvoya</span>
             </div>
             <p className="text-sm text-muted-foreground">
               © 2024 Secvoya. Безопасная разработка как процесс.
